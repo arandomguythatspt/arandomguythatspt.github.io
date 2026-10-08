@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name</title>
+  <meta name="description" content="A short description of your site.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="#top">Your Name</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <h1>I make things for the web.</h1>
+      <p class="lead">Replace this with one or two sentences about who you are and what you do.</p>
+      <a class="button" href="#projects">See my work</a>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>Write a short paragraph about yourself, your background, and what you care about. Keep it plain and specific.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul class="projects">
+        <li>
+          <h3><a href="#">Project one</a></h3>
+          <p>One sentence on what it is and what you did.</p>
+        </li>
+        <li>
+          <h3><a href="#">Project two</a></h3>
+          <p>One sentence on what it is and what you did.</p>
+        </li>
+        <li>
+          <h3><a href="#">Project three</a></h3>
+          <p>One sentence on what it is and what you did.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email me at <a href="mailto:you@example.com">you@example.com</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Your Name</p>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

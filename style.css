@@ -1,0 +1,78 @@
+:root {
+  --paper: #eef2f4;
+  --ink: #14263a;
+  --muted: #53657a;
+  --accent: #e0a100;
+  --line: #cdd7de;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #101b27;
+    --ink: #e6edf3;
+    --muted: #9fb0c1;
+    --line: #26394d;
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 1.0625rem/1.65 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+.top, main, footer {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.brand { font-weight: 700; text-decoration: none; color: var(--ink); }
+nav { display: flex; gap: 1.25rem; }
+nav a { color: var(--muted); text-decoration: none; }
+nav a:hover { color: var(--ink); }
+
+a { color: var(--ink); text-decoration-color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 2px; }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+h1, h2, h3 {
+  font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  line-height: 1.15;
+  margin: 0 0 .75rem;
+}
+h1 { font-size: clamp(2.4rem, 8vw, 4rem); letter-spacing: -0.02em; }
+h2 { font-size: 1.6rem; }
+h3 { font-size: 1.2rem; margin-bottom: .25rem; }
+
+.hero { padding: 4rem 0 3rem; }
+.lead { font-size: 1.25rem; color: var(--muted); max-width: 34rem; }
+.button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: .7rem 1.2rem;
+  background: var(--accent);
+  color: #14263a;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+}
+.button:hover { filter: brightness(1.08); }
+
+section { padding: 2.5rem 0; border-top: 1px solid var(--line); }
+.hero { border-top: 0; }
+
+.projects { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.5rem; }
+.projects p { margin: 0; color: var(--muted); }
+
+footer { padding-top: 2rem; padding-bottom: 3rem; color: var(--muted); border-top: 1px solid var(--line); }
+footer p { margin: 0; }
