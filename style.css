@@ -76,3 +76,13 @@ section { padding: 2.5rem 0; border-top: 1px solid var(--line); }
 
 footer { padding-top: 2rem; padding-bottom: 3rem; color: var(--muted); border-top: 1px solid var(--line); }
 footer p { margin: 0; }
+
+.actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1rem; }
+.actions .button { margin-top: 0; }
+.button.secondary {
+  background: transparent;
+  color: var(--ink);
+  border: 2px solid var(--ink);
+}
+.button.secondary:hover { background: var(--ink); color: var(--paper); filter: none; }
+nav a[aria-current="page"] { color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 6px; }
